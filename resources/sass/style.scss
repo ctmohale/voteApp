@@ -1,0 +1,107 @@
+body{
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: 'Nunito', sans-serif;
+
+    .navbar{
+        background-color: #f4b27d;
+        padding: 25px !important;
+    }
+    .card{
+        border-style: none !important;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+.row{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.main{
+    min-height: 600px;
+   
+    background-image: url(/img/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .btn{
+        padding: 15px;
+        border-radius: 100px;
+        width: 200px;
+    }
+    .sub-main{
+        min-height: inherit;
+        background-color: #f4b37da9;
+        text-align: center;
+        padding-top: 200px;
+
+        h1{
+            font-size: 80px !important;
+        }
+        p{
+            font-size: 30px !important;
+        }
+    }
+}
+.main-form{
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+
+    .col-2{
+        text-align: right !important;
+        padding-top: 20px;
+    }
+}
+
+.form-control{
+    margin: 1%;
+    background-color: rgba(255, 0, 0, 0);
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+footer{
+    padding: 50px !important;
+    #Social{
+        a{
+            background-color: #5c5c5c36;
+            padding: 5px !important;
+            border-radius: 100px;
+            margin: 5px;
+
+
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { 
+    .main{
+        background-image: url(/img/mobile.jpg);
+        padding: 2% !important;
+        margin: 0 !important;
+        min-height: 650px !important;
+        .btn{
+            padding: 15px;
+
+
+        }
+        .sub-main{
+            min-height: inherit;
+            background-color: #f4b37da9;
+            text-align: center;
+            padding-top: 200px;
+    
+            h1{
+                font-size: 60px !important;
+            }
+
+        }
+    }
+}

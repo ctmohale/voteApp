@@ -1,0 +1,96 @@
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: "Nunito", sans-serif;
+}
+body .navbar {
+  background-color: #f4b27d;
+  padding: 25px !important;
+}
+body .card {
+  border-style: none !important;
+}
+body a {
+  text-decoration: none;
+}
+
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.main {
+  min-height: 600px;
+  background-image: url(/img/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main .btn {
+  padding: 15px;
+  border-radius: 100px;
+  width: 200px;
+}
+.main .sub-main {
+  min-height: inherit;
+  background-color: rgba(244, 179, 125, 0.662745098);
+  text-align: center;
+  padding-top: 200px;
+}
+.main .sub-main h1 {
+  font-size: 80px !important;
+}
+.main .sub-main p {
+  font-size: 30px !important;
+}
+
+.main-form {
+  margin-left: 15% !important;
+  margin-right: 15% !important;
+}
+.main-form .col-2 {
+  text-align: right !important;
+  padding-top: 20px;
+}
+
+.form-control {
+  margin: 1%;
+  background-color: rgba(255, 0, 0, 0);
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+footer {
+  padding: 50px !important;
+}
+footer #Social a {
+  background-color: rgba(92, 92, 92, 0.2117647059);
+  padding: 5px !important;
+  border-radius: 100px;
+  margin: 5px;
+}
+footer a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .main {
+    background-image: url(/img/mobile.jpg);
+    padding: 2% !important;
+    margin: 0 !important;
+    min-height: 650px !important;
+  }
+  .main .btn {
+    padding: 15px;
+  }
+  .main .sub-main {
+    min-height: inherit;
+    background-color: rgba(244, 179, 125, 0.662745098);
+    text-align: center;
+    padding-top: 200px;
+  }
+  .main .sub-main h1 {
+    font-size: 60px !important;
+  }
+}
