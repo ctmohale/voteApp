@@ -43,6 +43,12 @@ body a {
 .main .sub-main p {
   font-size: 30px !important;
 }
+.main #profile {
+  background-color: rgba(238, 238, 238, 0.9607843137);
+}
+.main #vote {
+  background-color: rgba(244, 179, 125, 0.4196078431);
+}
 
 .main-form {
   margin-left: 15% !important;

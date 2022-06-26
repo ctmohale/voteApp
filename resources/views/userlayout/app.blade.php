@@ -15,8 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
 
     <title>@yield('title')</title>
+    @livewireStyles
   </head>
   <body>
+    @include('sweetalert::alert')
     <nav class="navbar navbar-expand-lg navbar-dark p-3 fixed-top">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,14 +34,31 @@
                 <a class="nav-link" href="user.register">Registere </a>
               </li>
             </ul>
-            <span> <a href="" class="text-secondary m-2"> <i class="fas fa-sign-in text-secondary"></i> Sign in </a></span>
-            <span> <a href="" class="text-secondary m-2"> <i class="fa-solid fa-user text-secondary"></i> User </a></span>
-            <span> <a href="" class="text-secondary m-2"> <i class="fas fa-sign-out"></i> Log out </a></span>
+            @if (isset(session('user')->name))
+                <span> 
+                    <a href="{{ route('vote') }}" class="text-secondary m-2">
+
+                        @if ($vote == true)
+                            <b class="text-secondary"><i class="fas fa-smile text-light"></i> Voting Status</b> 
+                        @else
+                            <b class="text-secondary"><i class="fas fa-frown text-danger"></i> Voting Status</b>
+                        @endif
+                        
+                    </a>
+                </span>
+                <span> <a href="{{ route('profile') }}" class="text-secondary m-2"> <i class="fa-solid fa-user text-secondary"></i> {{session('user')->name}} </a></span>
+                <span> <a href="{{ route('logout') }}" class="text-secondary m-2"> <i class="fas fa-sign-out"></i> Log out </a></span>
+            @else
+                <span> <a href="" data-bs-toggle="modal" data-bs-target="#LoginModal" class="text-secondary m-2"> <i class="fas fa-sign-in text-secondary"></i> Sign in </a></span>
+            @endif
+
           </div>
         </div>
     </nav>
     @yield('content')
+    @include('userlayout.modal')
     @include('userlayout.footer')
+    @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
